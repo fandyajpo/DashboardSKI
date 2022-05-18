@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { getLayout } from "components/layout/sideNav";
+import { getLayout } from "components/layout/Navbar";
 import { GlobalContext } from "context/global";
 
 import FormCategory from "components/form/FormCategory";

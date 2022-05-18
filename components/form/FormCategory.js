@@ -1,6 +1,11 @@
 import { useState } from "react";
 
-export default function FormProduct({ myRef, globalCtx, globalAct, onSubmit }) {
+export default function FormCategory({
+  myRef,
+  globalCtx,
+  globalAct,
+  onSubmit,
+}) {
   return (
     <div className="w-full h-auto">
       <form onSubmit={onSubmit}>
@@ -25,13 +30,7 @@ export default function FormProduct({ myRef, globalCtx, globalAct, onSubmit }) {
               <div className="w-auto h-full flex items-center gap-x-2">
                 <button
                   disabled={globalCtx.isFetch ? "disabled" : ""}
-                  className="px-8 h-10 bg-red-500/30 text-red-500 border-2 shadow-md hover:bg-red-500/50 border-red-300 font-semibold rounded overflow-hidden"
-                >
-                  Cancel
-                </button>
-                <button
-                  disabled={globalCtx.isFetch ? "disabled" : ""}
-                  className="px-8 h-10 bg-green-500/30 text-green-500 border-2 shadow-md hover:bg-green-500/50 border-green-300 font-semibold rounded overflow-hidden"
+                  className="px-6 h-8 bg-green-500/30 text-green-500 border-2 shadow-md hover:bg-green-500/50 border-green-300 font-semibold rounded overflow-hidden"
                 >
                   Create
                 </button>

@@ -85,15 +85,17 @@ const Administration = (props) => {
         <div className="flex gap-2 rotate-45 overflow-hidden absolute">
           <div className="bg-red-600 w-44 h-44" />
           <div className="bg-red-600 w-64 h-64" />
-          <div className="bg-red-400 w-72 h-72" />
-          <div className="bg-red-600 w-96 h-96" />
-          <div className="bg-red-300 w-44 h-44" />
-          <div className="bg-red-800 w-44 h-44" />
+          <div className="bg-red-400 w-72 h-72 translate-y-4" />
+          <div className="bg-red-600 w-96 h-96 " />
+          <div className="relative">
+            <div className="bg-red-500 w-44 h-44 -translate-y-24 absolute bottom-24" />
+          </div>
+          <div className="bg-black w-44 h-44" />
           <div className="bg-red-900 w-44 h-44" />
         </div>
       </div>
       <div className="w-full min-h-screen relative flex flex-row justify-center items-center gap-4">
-        <div className="bg-gray-100 rounded-full" />
+        {/* <div className="bg-red-500 rounded-full w-full h-screen" /> */}
         <div className="w-96 h-auto relative">
           {props.isLogin ? (
             <div className="w-full h-32 relative select-none ">

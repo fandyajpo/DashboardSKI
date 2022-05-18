@@ -1,4 +1,4 @@
-import { getLayout } from "components/layout/sideNav";
+import { getLayout } from "components/layout/Navbar";
 
 const Dashboard = () => {
   return (

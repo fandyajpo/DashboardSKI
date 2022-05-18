@@ -25,10 +25,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/dashboard/manage_category": [
+    "/dashboard/history": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/dashboard/manage_category.js"
+      "static/chunks/pages/dashboard/history.js"
     ],
     "/dashboard/manage_order": [
       "static/chunks/webpack.js",
