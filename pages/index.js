@@ -23,7 +23,7 @@ import FormLogin from "components/form/FormLogin";
 //   const validationToken = await checkerToken( user )
 //   if (validationToken.error) {
 //     await req.session.destroy();
-//     return redirect("/administration")
+//     return redirect("/dashboard")
 //   }
 
 //   if ( validationToken.status === "refresh" ) {
@@ -80,10 +80,20 @@ const Administration = (props) => {
     }
   };
   return (
-    <div className="w-full min-h-screen relative bg-white flex flex-row">
-      <div className="w-full min-h-screen"></div>
+    <div className="w-full min-h-screen relative bg-white flex flex-row overflow-hidden">
+      <div className="w-full min-h-screen flex items-center justify-center">
+        <div className="flex gap-2 rotate-45 overflow-hidden absolute">
+          <div className="bg-red-600 w-44 h-44" />
+          <div className="bg-red-600 w-64 h-64" />
+          <div className="bg-red-400 w-72 h-72" />
+          <div className="bg-red-600 w-96 h-96" />
+          <div className="bg-red-300 w-44 h-44" />
+          <div className="bg-red-800 w-44 h-44" />
+          <div className="bg-red-900 w-44 h-44" />
+        </div>
+      </div>
       <div className="w-full min-h-screen relative flex flex-row justify-center items-center gap-4">
-        <div className="w-0.5 h-64 bg-gray-100 rounded-full" />
+        <div className="bg-gray-100 rounded-full" />
         <div className="w-96 h-auto relative">
           {props.isLogin ? (
             <div className="w-full h-32 relative select-none ">

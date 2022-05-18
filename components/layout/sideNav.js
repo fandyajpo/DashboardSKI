@@ -10,8 +10,10 @@ import { GlobalContext } from "context/global";
 const ChildMenu = ({ q, a, r }) => (
   <Link href={q}>
     <button
-      className={`w-full h-10 flex items-center border-b border-gray-300 pl-8 text-xs ${
-        r === q ? "text-blue-700" : "text-gray-700"
+      className={`duration-1000 w-full h-10 flex items-center border-b pl-8  text-xs ${
+        r === q
+          ? "text-red-600 border-red-600 bg-gradient-to-tr from-red-500 via-white to-white"
+          : "text-gray-700 border-gray-300 bg-white"
       } font-bold`}
     >
       {a}
@@ -127,7 +129,7 @@ const SideNav = ({ children }) => {
         </div>
       </div>
       <div className="w-screen h-full relative">
-        <div className="w-full h-20 p-6 absolute top-0 bg-gradient-to-r from-white via-red-400 to-red-600 border-b shadow flex justify-between">
+        <div className="w-full h-20 p-6 absolute top-0 bg-gradient-to-r from-white via-white to-red-600 border-b shadow flex justify-between">
           <div className="w-full h-auto flex items-center text-sm capitalize">
             <Link href="/dashboard">
               <svg
