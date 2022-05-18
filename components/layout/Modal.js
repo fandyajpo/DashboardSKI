@@ -19,6 +19,13 @@ const Modal = (props) => {
       >
         <ProductModal globalCtx={props.globalCtx} globalAct={props.globalAct} />
       </div>
+      {/* <div
+        className={`${
+          modal === "addProduct" ? "translate-x-0" : "translate-x-full"
+        } z-50 fixed right-0 duration-700 w-2/4 h-screen p-4`}
+      >
+        <ProductModal globalCtx={props.globalCtx} globalAct={props.globalAct} />
+      </div> */}
     </div>
   );
 };

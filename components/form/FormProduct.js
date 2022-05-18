@@ -1,6 +1,13 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function FormProduct({ myRef, globalCtx, globalAct, onSubmit }) {
+  const [detail, setDetail] = useState(false);
+  const [infoLengkap, setInfoLengkap] = useState(false);
+
+  useEffect(() => {
+    !detail && setInfoLengkap(false);
+  });
+
   return (
     <div className="w-full h-auto">
       <form onSubmit={onSubmit}>
@@ -35,7 +42,7 @@ export default function FormProduct({ myRef, globalCtx, globalAct, onSubmit }) {
             </div>
             <div className="flex flex-row w-full gap-x-4">
               <div className="flex flex-row gap-x-4">
-                <div className="w-full h-auto relative mb-4">
+                <div className="w-full h-auto relative mb-2">
                   <p className="text-xs font-bold text-gray-700 pb-1">
                     PRODUCT PRICE
                   </p>
@@ -48,7 +55,7 @@ export default function FormProduct({ myRef, globalCtx, globalAct, onSubmit }) {
                   />
                 </div>
               </div>
-              <div className="w-full h-auto relative mb-4">
+              <div className="w-full h-auto relative mb-2">
                 <p className="text-xs font-bold text-gray-700 pb-1">STOCK</p>
                 <input
                   name="stock"
@@ -59,30 +66,69 @@ export default function FormProduct({ myRef, globalCtx, globalAct, onSubmit }) {
                 />
               </div>
             </div>
-            <div className="w-full h-auto relative mb-4">
-              <p className="text-xs font-bold text-gray-700">DETAIL</p>
-              <textarea
-                name="detail"
-                type="text"
-                className="text_area_detail h-40 placeholder-gray-300 form-input mt-1 rounded-md border w-full"
-                placeholder="Masukan detail barang"
-                disabled={globalCtx.isFetch ? "disabled" : ""}
-              />
+            <div className="w-full h-auto relative mb-2">
+              <div className="flex items-center gap-x-2 pb-2">
+                <p
+                  onClick={() => setInfoLengkap(false)}
+                  className={`text-xs font-bold p-2 border rounded-md border-gray-500 ${
+                    infoLengkap
+                      ? "text-gray-700"
+                      : "text-orange-700 bg-orange-500/30 border-orange-500"
+                  }`}
+                >
+                  DETAIL
+                </p>
+                <p
+                  onClick={() => setInfoLengkap(true)}
+                  className={`text-xs font-bold text-gray-700 p-2 border rounded-md border-gray-500 ${
+                    infoLengkap
+                      ? "text-orange-700 bg-orange-500/30 border-orange-500"
+                      : "text-gray-700"
+                  } ${detail ? "" : "hidden"}`}
+                >
+                  INFO LENGKAP
+                </p>
+              </div>
+              <div className="flex justify-center">
+                <textarea
+                  // disabled
+                  name="detail"
+                  type="text"
+                  className={`resize-none duration-500 text_area_detail h-40 placeholder-gray-300 form-input rounded-md border ${
+                    !infoLengkap ? "w-full" : "w-4 overflow-hidden opacity-30"
+                  }`}
+                  placeholder="Masukan detail barang"
+                  disabled={
+                    // globalCtx.isFetch ||
+                    infoLengkap ? "disabled" : ""
+                  }
+                />
+                {detail ? (
+                  <textarea
+                    name="detail"
+                    type="text"
+                    className={`resize-none duration-150 text_area_detail h-40 placeholder-gray-300 form-input rounded-md border ${
+                      infoLengkap ? "w-full" : "w-4 overflow-hidden opacity-30"
+                    }`}
+                    placeholder="Masukan detail barang"
+                    disabled={
+                      // globalCtx.isFetch ||
+                      !infoLengkap ? "disabled" : ""
+                    }
+                  />
+                ) : null}
+              </div>
             </div>
             <label className="switch">
               <input
                 type="checkbox"
-                // value={moreDay}
-                // onClick={() => {
-                //   setMoreDay(!moreDay);
-                //   setInputValue({ ...inputValue, sampai: "" });
-                // }}
-                // onChange={(e) => setMoreDay(e.target.checked)}
+                onClick={() => {
+                  setDetail(!detail);
+                }}
               />
               <span className="slider round"></span>
             </label>
-
-            <div className="w-full h-12 flex justify-between gap-2">
+            <div className="w-full h-12 flex justify-between">
               <div className="w-full h-full flex items-center text-xs text-red-400">
                 {globalCtx.errorMsg}
               </div>

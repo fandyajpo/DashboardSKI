@@ -25,15 +25,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/dashboard/history": [
+    "/dashboard/manage_category": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/dashboard/history.js"
+      "static/chunks/pages/dashboard/manage_category.js"
     ],
-    "/dashboard/manage_order": [
+    "/dashboard/manage_product": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/dashboard/manage_order.js"
+      "static/chunks/pages/dashboard/manage_product.js"
     ]
   },
   "ampFirstPages": []

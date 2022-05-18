@@ -4,8 +4,8 @@ import { GlobalContext } from "context/global";
 const ProductModal = () => {
   const { globalAct, globalCtx } = useContext(GlobalContext);
   return (
-    <div className="bg-white w-full h-full rounded-md">
-      <div className="bg-red-500 h-14 w-full rounded-md flex items-center justify-center">
+    <div className="bg-white w-full h-full rounded-md shadow-sm shadow-black">
+      <div className="bg-red-500 h-12 w-full rounded-md flex items-center justify-center">
         <p className="text-white font-bold">Create new product</p>
       </div>
       <FormProduct

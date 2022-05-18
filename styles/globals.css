@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.text_area_detail {
-  resize: none;
-}
-
 .switch {
   position: relative;
   display: inline-block;

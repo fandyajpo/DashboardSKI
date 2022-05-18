@@ -13,7 +13,7 @@ const CategoryTable = () => {
         Category Table
       </p>
       <div className="py-2">
-        <div className="flex w-full justify-between bg-red-500 p-4 rounded-md">
+        <div className="flex w-full justify-between bg-red-500 px-4 py-3 rounded-md">
           <p className="text-white font-bold text-xs">NAME</p>
           <p className="text-white font-bold text-xs">ACTION</p>
         </div>
