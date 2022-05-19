@@ -17,7 +17,6 @@ export default function FormLogin({ myRef, globalCtx, globalAct, onSubmit }) {
                 disabled={globalCtx.isFetch ? "disabled" : ""}
               />
             </div>
-
             <div className="w-full h-auto relative mb-4">
               <p className="text-sm font-extrabold">Password</p>
               <div className="relative">

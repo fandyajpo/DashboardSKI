@@ -23,7 +23,7 @@ const ChildMenu = ({ q, a, r }) => (
 );
 
 const Item = ({ q, a, r }) => (
-  <div className="relative overflow-hidden border-b-2 border-white ">
+  <div className="relative overflow-hidden border-b-2 border-white">
     <input
       type="checkbox"
       className="peer absolute top-0 inset-x-0 w-full h-12 opacity-0 z-10 cursor-pointer"
@@ -132,7 +132,7 @@ const SideNav = ({ children }) => {
             ))}
           </div>
         </div>
-        <div className="w-screen h-full relative">
+        <div className="w-screen h-full relative border-l-2">
           <div className="w-full h-14 p-6 absolute top-0 bg-gradient-to-r from-white via-white to-red-600 border-b shadow-sm flex justify-between">
             <div className="w-full h-auto flex items-center text-sm capitalize">
               <Link href="/dashboard">
@@ -179,7 +179,7 @@ const SideNav = ({ children }) => {
               </div>
             </div>
           </div>
-          <div className="w-full h-full pt-16  shadow-md">{children}</div>
+          <div className="w-full h-full pt-16">{children}</div>
         </div>
       </div>
     </>

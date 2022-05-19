@@ -1,5 +1,5 @@
 import ProductModal from "components/modal/Product";
-
+import ProductImageModal from "components/modal/ProductImage";
 const Modal = (props) => {
   const { modal } = props.globalCtx;
   const { setModal } = props.globalAct;
@@ -19,13 +19,16 @@ const Modal = (props) => {
       >
         <ProductModal globalCtx={props.globalCtx} globalAct={props.globalAct} />
       </div>
-      {/* <div
+      <div
         className={`${
           modal === "addProduct" ? "translate-x-0" : "translate-x-full"
-        } z-50 fixed right-0 duration-700 w-2/4 h-screen p-4`}
+        } z-50 fixed right-0 duration-700 w-96 h-screen p-4`}
       >
-        <ProductModal globalCtx={props.globalCtx} globalAct={props.globalAct} />
-      </div> */}
+        <ProductImageModal
+          globalCtx={props.globalCtx}
+          globalAct={props.globalAct}
+        />
+      </div>
     </div>
   );
 };

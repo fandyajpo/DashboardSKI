@@ -20,7 +20,7 @@ export default function FormProduct({ myRef, globalCtx, globalAct, onSubmit }) {
               <input
                 name="username"
                 type="text"
-                className="placeholder-gray-300 form-input mt-1 rounded-md border w-full"
+                className="placeholder-gray-300 form-input mt-1 rounded-md border border-gray-400 w-full"
                 placeholder="Username"
                 disabled={globalCtx.isFetch ? "disabled" : ""}
               />
@@ -30,7 +30,7 @@ export default function FormProduct({ myRef, globalCtx, globalAct, onSubmit }) {
               <select
                 name="password"
                 type="text"
-                className="placeholder-gray-300 form-input mt-1 rounded-md border w-full"
+                className="placeholder-gray-300 form-input mt-1 rounded-md border border-gray-400 w-full"
                 placeholder="Password"
                 disabled={globalCtx.isFetch ? "disabled" : ""}
               >
@@ -41,26 +41,48 @@ export default function FormProduct({ myRef, globalCtx, globalAct, onSubmit }) {
               </select>
             </div>
             <div className="flex flex-row w-full gap-x-4">
-              <div className="flex flex-row gap-x-4">
+              <div className="w-full flex flex-row gap-x-4">
                 <div className="w-full h-auto relative mb-2">
                   <p className="text-xs font-bold text-gray-700 pb-1">
-                    PRODUCT PRICE
+                    HARGA PRODUKSI
                   </p>
                   <input
                     name="product-price"
                     type="text"
-                    className="placeholder-gray-300 form-input mt-1 rounded-md border w-full"
+                    className="placeholder-gray-300 form-input mt-1 rounded-md border border-gray-400 w-full"
                     placeholder="Harga Barang"
                     disabled={globalCtx.isFetch ? "disabled" : ""}
                   />
                 </div>
               </div>
               <div className="w-full h-auto relative mb-2">
-                <p className="text-xs font-bold text-gray-700 pb-1">STOCK</p>
+                <p className="text-xs font-bold text-gray-700 pb-1">HARGA</p>
                 <input
                   name="stock"
                   type="text"
-                  className="placeholder-gray-300 form-input mt-1 rounded-md border w-full"
+                  className="placeholder-gray-300 form-input mt-1 rounded-md border border-gray-400 w-full"
+                  placeholder="Stock"
+                  disabled={globalCtx.isFetch ? "disabled" : ""}
+                />
+              </div>
+              <div className="w-full flex flex-row gap-x-4">
+                <div className="w-full h-auto relative mb-2">
+                  <p className="text-xs font-bold text-gray-700 pb-1">STOCK</p>
+                  <input
+                    name="product-price"
+                    type="text"
+                    className="placeholder-gray-300 form-input mt-1 rounded-md border border-gray-400 w-full"
+                    placeholder="Harga Barang"
+                    disabled={globalCtx.isFetch ? "disabled" : ""}
+                  />
+                </div>
+              </div>
+              <div className="w-full h-auto relative mb-2">
+                <p className="text-xs font-bold text-gray-700 pb-1">BERAT</p>
+                <input
+                  name="stock"
+                  type="text"
+                  className="placeholder-gray-300 form-input mt-1 rounded-md border border-gray-400 w-full"
                   placeholder="Stock"
                   disabled={globalCtx.isFetch ? "disabled" : ""}
                 />
@@ -94,7 +116,7 @@ export default function FormProduct({ myRef, globalCtx, globalAct, onSubmit }) {
                   // disabled
                   name="detail"
                   type="text"
-                  className={`resize-none duration-500 text_area_detail h-40 placeholder-gray-300 form-input rounded-md border ${
+                  className={`resize-none duration-500 text_area_detail h-40 placeholder-gray-300 form-input rounded-md border border-gray-400 ${
                     !infoLengkap ? "w-full" : "w-4 overflow-hidden opacity-30"
                   }`}
                   placeholder="Masukan detail barang"
@@ -107,7 +129,7 @@ export default function FormProduct({ myRef, globalCtx, globalAct, onSubmit }) {
                   <textarea
                     name="detail"
                     type="text"
-                    className={`resize-none duration-150 text_area_detail h-40 placeholder-gray-300 form-input rounded-md border ${
+                    className={`resize-none duration-150 text_area_detail h-40 placeholder-gray-300 form-input rounded-md border border-gray-400 ${
                       infoLengkap ? "w-full" : "w-4 overflow-hidden opacity-30"
                     }`}
                     placeholder="Masukan detail barang"
