@@ -13,9 +13,9 @@ const ManageCategory = () => {
       <div>
         <FormCategory globalAct={globalAct} globalCtx={globalCtx} />
       </div>
-      <div>
+      {/* <div>
         <SearchCategory />
-      </div>
+      </div> */}
       <div>
         <CategoryTable />
       </div>

@@ -20,7 +20,7 @@ export default function FormProduct({ myRef, globalCtx, globalAct, onSubmit }) {
               <input
                 name="username"
                 type="text"
-                className="placeholder-gray-300 form-input mt-1 rounded-md border border-gray-400 w-full"
+                className="placeholder-gray-300 h-10 form-input mt-1 rounded-md border border-gray-400 w-full"
                 placeholder="Username"
                 disabled={globalCtx.isFetch ? "disabled" : ""}
               />
@@ -30,7 +30,7 @@ export default function FormProduct({ myRef, globalCtx, globalAct, onSubmit }) {
               <select
                 name="password"
                 type="text"
-                className="placeholder-gray-300 form-input mt-1 rounded-md border border-gray-400 w-full"
+                className="placeholder-gray-300 h-10 form-input mt-1 rounded-md border border-gray-400 w-full"
                 placeholder="Password"
                 disabled={globalCtx.isFetch ? "disabled" : ""}
               >
@@ -49,7 +49,7 @@ export default function FormProduct({ myRef, globalCtx, globalAct, onSubmit }) {
                   <input
                     name="product-price"
                     type="text"
-                    className="placeholder-gray-300 form-input mt-1 rounded-md border border-gray-400 w-full"
+                    className="placeholder-gray-300 h-10 form-input mt-1 rounded-md border border-gray-400 w-full"
                     placeholder="Harga Barang"
                     disabled={globalCtx.isFetch ? "disabled" : ""}
                   />
@@ -60,7 +60,7 @@ export default function FormProduct({ myRef, globalCtx, globalAct, onSubmit }) {
                 <input
                   name="stock"
                   type="text"
-                  className="placeholder-gray-300 form-input mt-1 rounded-md border border-gray-400 w-full"
+                  className="placeholder-gray-300 h-10 form-input mt-1 rounded-md border border-gray-400 w-full"
                   placeholder="Stock"
                   disabled={globalCtx.isFetch ? "disabled" : ""}
                 />
@@ -71,7 +71,7 @@ export default function FormProduct({ myRef, globalCtx, globalAct, onSubmit }) {
                   <input
                     name="product-price"
                     type="text"
-                    className="placeholder-gray-300 form-input mt-1 rounded-md border border-gray-400 w-full"
+                    className="placeholder-gray-300 h-10 form-input mt-1 rounded-md border border-gray-400 w-full"
                     placeholder="Harga Barang"
                     disabled={globalCtx.isFetch ? "disabled" : ""}
                   />
@@ -82,7 +82,7 @@ export default function FormProduct({ myRef, globalCtx, globalAct, onSubmit }) {
                 <input
                   name="stock"
                   type="text"
-                  className="placeholder-gray-300 form-input mt-1 rounded-md border border-gray-400 w-full"
+                  className="placeholder-gray-300 h-10 form-input mt-1 rounded-md border border-gray-400 w-full"
                   placeholder="Stock"
                   disabled={globalCtx.isFetch ? "disabled" : ""}
                 />
@@ -92,7 +92,7 @@ export default function FormProduct({ myRef, globalCtx, globalAct, onSubmit }) {
               <div className="flex items-center gap-x-2 pb-2">
                 <p
                   onClick={() => setInfoLengkap(false)}
-                  className={`text-xs font-bold p-2 border rounded-md border-gray-500 ${
+                  className={`text-xs  font-bold px-2 py-1 border rounded-md border-gray-500 ${
                     infoLengkap
                       ? "text-gray-700"
                       : "text-orange-700 bg-orange-500/30 border-orange-500"
@@ -102,7 +102,7 @@ export default function FormProduct({ myRef, globalCtx, globalAct, onSubmit }) {
                 </p>
                 <p
                   onClick={() => setInfoLengkap(true)}
-                  className={`text-xs font-bold text-gray-700 p-2 border rounded-md border-gray-500 ${
+                  className={`text-xs font-bold text-gray-700 px-2 py-1 border rounded-md border-gray-500 ${
                     infoLengkap
                       ? "text-orange-700 bg-orange-500/30 border-orange-500"
                       : "text-gray-700"
@@ -141,22 +141,27 @@ export default function FormProduct({ myRef, globalCtx, globalAct, onSubmit }) {
                 ) : null}
               </div>
             </div>
-            <label className="switch">
-              <input
-                type="checkbox"
-                onClick={() => {
-                  setDetail(!detail);
-                }}
-              />
-              <span className="slider round"></span>
-            </label>
+            <div className="flex items-center gap-x-2">
+              <label className="switch">
+                <input
+                  type="checkbox"
+                  onClick={() => {
+                    setDetail(!detail);
+                  }}
+                />
+                <span className="slider round"></span>
+              </label>
+              <p className="text-xs font-semibold">
+                Apakah berisini info lengkap ?
+              </p>
+            </div>
             <div className="w-full h-12 flex justify-between">
               <div className="w-full h-full flex items-center text-xs text-red-400">
                 {globalCtx.errorMsg}
               </div>
               <div className="w-auto h-full flex items-center">
                 <button
-                  disabled={globalCtx.isFetch ? "disabled" : ""}
+                  disabled
                   className="px-6 h-8 bg-green-500/30 text-green-500 border-2 shadow-md hover:bg-green-500/50 border-green-300 font-semibold rounded overflow-hidden"
                 >
                   Create

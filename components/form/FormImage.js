@@ -42,25 +42,7 @@ export default function FormImage({
   }, [update]);
 
   return (
-    // <div className="w-full h-auto">
-    //   <form onSubmit={onSubmit}>
-    //     <div className="w-full h-full select-none">
-    //       <div className="w-full h-full p-3 rounded-md">
-    //         <div className="w-full h-auto relative mb-2">
-    //           <p className="text-xs font-bold text-gray-700 pb-1">[p] NAME</p>
-    //           <input
-    //             name="username"
-    //             type="text"
-    //             className="placeholder-gray-300 form-input mt-1 rounded-md border border-gray-400 w-full"
-    //             placeholder="Username"
-    //             disabled={globalCtx.isFetch ? "disabled" : ""}
-    //           />
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </form>
-    // </div>
-    <div className="w-full h-auto shadow-md rounded-lg bg-gray-50">
+    <div className="w-full h-auto bg-white">
       <div className="w-full h-auto relative pt-2">
         <input
           accept="image/png, image/gif, image/jpeg"

@@ -56,3 +56,69 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
+.ball_1 {
+  animation: firstBall 3s linear infinite;
+}
+
+.ball_2 {
+  animation: secondBall 2s linear infinite;
+}
+
+.ball_3 {
+  animation: thirdBall 1.5s linear infinite;
+}
+
+@keyframes firstBall {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(0.7);
+  }
+  75% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes secondBall {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(0.7);
+  }
+  75% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes thirdBall {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(0.7);
+  }
+  75% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

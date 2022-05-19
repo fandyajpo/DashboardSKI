@@ -11,10 +11,10 @@ import Modal from "./Modal";
 const ChildMenu = ({ q, a, r }) => (
   <Link href={q}>
     <button
-      className={`duration-1000 w-full h-10 flex items-center border-b pl-8  text-xs ${
+      className={`duration-500 w-full h-10 flex items-center border-b pl-8  text-xs ${
         r === q
           ? "text-red-600 border-red-600 bg-gradient-to-tr from-red-500 via-white to-white"
-          : "text-gray-700 border-gray-300 bg-white"
+          : "text-gray-700 border-gray-300 bg-white hover:scale-105 hover:bg-red-500 hover:text-white"
       } font-bold`}
     >
       {a}
@@ -62,7 +62,7 @@ const SideNav = ({ children }) => {
   const { query } = router;
   const faqs = [
     {
-      name: "Manage",
+      name: "Manage [ Pencet ini! ]",
       menu: [
         {
           link: "/dashboard",
@@ -115,7 +115,7 @@ const SideNav = ({ children }) => {
   return (
     <>
       <Modal globalCtx={globalCtx} globalAct={globalAct} />
-      <div className="w-full h-screen flex flex-row">
+      <div className="w-full h-full flex flex-row">
         <div className="w-80 h-full bg-white flex flex-col select-none">
           <div className="w-full h-auto flex justify-center items-center">
             <div className="w-52 h-52 p-4">
@@ -132,7 +132,7 @@ const SideNav = ({ children }) => {
             ))}
           </div>
         </div>
-        <div className="w-screen h-full relative border-l-2">
+        <div className="w-full max-h-max relative border-l-2">
           <div className="w-full h-14 p-6 absolute top-0 bg-gradient-to-r from-white via-white to-red-600 border-b shadow-sm flex justify-between">
             <div className="w-full h-auto flex items-center text-sm capitalize">
               <Link href="/dashboard">
@@ -159,7 +159,7 @@ const SideNav = ({ children }) => {
             <div className="w-full h-full flex items-center justify-end gap-2 text-xs font-semibold">
               <p className="text-white">{globalCtx.fullname}</p>
               <div
-                onClick={() => logout()}
+                onClick={() => alert("bentar mazeh")}
                 className="w-6 h-6 rounded-full bg-amber-500  flex justify-center items-center border-2 border-white shadow"
               >
                 <svg

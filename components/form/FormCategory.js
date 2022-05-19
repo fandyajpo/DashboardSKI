@@ -18,7 +18,7 @@ export default function FormCategory({
               <input
                 name="category"
                 type="text"
-                className="placeholder-gray-400 bg-gray-500/20 form-input mt-1 rounded-md border border-gray-300 w-full focus:ring-2 duration-500 focus:ring-blue-500"
+                className="placeholder-gray-400 h-10 bg-gray-500/20 form-input mt-1 rounded-md border border-gray-300 w-full focus:ring-2 duration-500 focus:ring-blue-500"
                 placeholder="Provide category name"
                 disabled={globalCtx.isFetch ? "disabled" : ""}
               />
@@ -29,7 +29,7 @@ export default function FormCategory({
               </div>
               <div className="w-auto h-full flex items-center gap-x-2">
                 <button
-                  disabled={globalCtx.isFetch ? "disabled" : ""}
+                  disabled
                   className="px-6 h-8 bg-green-500/30 text-green-500 border-2 shadow-md hover:bg-green-500/50 border-green-300 font-semibold rounded overflow-hidden"
                 >
                   Create

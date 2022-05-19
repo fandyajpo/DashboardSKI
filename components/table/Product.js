@@ -1,24 +1,39 @@
 import DataTable from "react-data-table-component";
+import { GlobalContext } from "context/global";
+import { useContext } from "react";
 
 const OrderTable = ({}) => {
+  const { globalCtx, globalAct } = useContext(GlobalContext);
   const data = [
     {
       name: "Coffe Stone",
       category: "Coffee",
+      harga: "Rp 3000.0000",
+      stock: 3,
     },
     {
       name: "Coffe Stone",
       category: "Coffee",
+      harga: "Rp 3000.0000",
+      stock: 377,
     },
     {
       name: "Coffe Stone",
       category: "Coffee",
+      harga: "Rp 3000.0000",
+      stock: 8,
+    },
+    {
+      name: "Kimak",
+      category: "Coffee",
+      harga: "Rp 3000.0000",
+      stock: 3,
     },
   ];
   const columns = [
     {
       name: <div className="font-bold text-red-500">Product</div>,
-      grow: 5,
+      grow: 2,
       cell: (a) => (
         <div className="w-full h-full py-1 flex flex-row gap-1 items-center">
           <p className="text-xs font-bold">{a.name}</p>
@@ -27,10 +42,29 @@ const OrderTable = ({}) => {
     },
     {
       name: <div className="font-bold text-red-500">Category</div>,
-      grow: 4,
+      grow: 2,
       cell: (a) => (
         <div className="w-full h-full py-1 flex flex-row gap-1 items-center">
           <p className="text-xs font-bold">{a.category}</p>
+        </div>
+      ),
+    },
+
+    {
+      name: <div className="font-bold text-red-500">Available Stock</div>,
+      grow: 2,
+      cell: (a) => (
+        <div className="w-full h-full py-1 flex flex-row gap-1 items-center">
+          <p className="text-xs font-bold">{a.stock}</p>
+        </div>
+      ),
+    },
+    {
+      name: <div className="font-bold text-red-500">Harga</div>,
+      grow: 2,
+      cell: (a) => (
+        <div className="w-full h-full py-1 flex flex-row gap-1 items-center">
+          <p className="text-xs font-bold">{a.harga}</p>
         </div>
       ),
     },
@@ -44,7 +78,7 @@ const OrderTable = ({}) => {
           <button
             onClick={() => alert("delete")}
             className={
-              "bg-orange-500/30 items-center justify-center h-8 w-8 rounded-md hover:bg-orange-500/50 shadow-md flex gap-x-2 text-xs text-orange-500 hover:w-24 duration-150 hover:before:content-['View']"
+              "bg-orange-500/30 items-center justify-center h-8 w-8 rounded-md hover:bg-orange-500/50 shadow-md flex gap-x-2 text-xs text-orange-500 hover:w-24 duration-150 hover:before:content-['View'] border border-orange-300"
             }
           >
             <svg
@@ -64,7 +98,7 @@ const OrderTable = ({}) => {
           <button
             onClick={() => alert("delete")}
             className={
-              "bg-blue-500/30 items-center justify-center h-8 w-8 rounded-md hover:bg-blue-500/50 shadow-md flex gap-x-2 text-xs text-blue-500 hover:w-24 duration-150 hover:before:content-['Edit']"
+              "bg-blue-500/30 items-center justify-center h-8 w-8 rounded-md hover:bg-blue-500/50 shadow-md flex gap-x-2 text-xs text-blue-500 hover:w-24 duration-150 hover:before:content-['Edit'] border border-blue-300"
             }
           >
             <svg
@@ -82,9 +116,9 @@ const OrderTable = ({}) => {
             </svg>
           </button>
           <button
-            onClick={() => alert("delete")}
+            onClick={() => globalAct.setModal("deleteProduct")}
             className={
-              "bg-red-500/30 items-center justify-center h-8 w-8 rounded-md hover:bg-red-500/50 shadow-md flex gap-x-2 text-xs text-red-500 hover:w-24 duration-150 hover:before:content-['Remove']"
+              "bg-red-500/30 items-center justify-center h-8 w-8 rounded-md hover:bg-red-500/50 shadow-md flex gap-x-2 text-xs text-red-500 hover:w-24 duration-150 hover:before:content-['Remove'] border border-red-300"
             }
           >
             <svg
