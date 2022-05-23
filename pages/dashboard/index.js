@@ -6,23 +6,23 @@ import History from "components/table/History";
 
 const Dashboard = () => {
   return (
-    <div className="w-full p-2 flex flex-col gap-y-4">
-      <div className="w-full flex flex-row items-center gap-x-4">
-        <div className="w-full">
+    <div className='w-full p-2 flex flex-col gap-y-4'>
+      <div className='w-full flex flex-row items-center gap-x-4'>
+        <div className='w-full'>
           <DashboardCard
             title={"Total Categorys"}
             content={"Categorys"}
             routes={"/dashboard/manage_category"}
           />
         </div>
-        <div className="w-full">
+        <div className='w-full'>
           <DashboardCard
             title={"Total Products"}
             content={"Products"}
             routes={"/dashboard/manage_product"}
           />
         </div>
-        <div className="w-full">
+        <div className='w-full'>
           <DashboardCard
             title={"Total Sold Items"}
             content={"Sold Items"}
@@ -33,24 +33,10 @@ const Dashboard = () => {
       <div>
         <hr />
       </div>
-      <div className="w-full flex flex-row items-center gap-x-4">
-        <div className="w-72">
+      <div className='w-full flex flex-row items-center gap-x-4'>
+        <div className='w-72'>
           <OrderCard />
         </div>
-        {/* <div className="w-full">
-          <DashboardCard
-            title={"Total Categorys"}
-            content={"Categorys"}
-            routes={"/dashboard/manage_category"}
-          />
-        </div>
-        <div className="w-full">
-          <DashboardCard
-            title={"Total Categorys"}
-            content={"Categorys"}
-            routes={"/dashboard/manage_category"}
-          />
-        </div> */}
       </div>
     </div>
   );
