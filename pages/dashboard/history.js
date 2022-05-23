@@ -8,12 +8,12 @@ import FormHistory from "components/form/FormHistory";
 const History = () => {
   const { globalAct, globalCtx } = useContext(GlobalContext);
   return (
-    <div className="w-full p-2 flex flex-col gap-y-2">
-      <div>
-        <FormHistory globalAct={globalAct} globalCtx={globalCtx} />
-      </div>
+    <div className='w-full p-2 flex flex-col gap-y-2'>
       <div>
         <HistoryTable />
+      </div>
+      <div>
+        <FormHistory globalAct={globalAct} globalCtx={globalCtx} />
       </div>
     </div>
   );

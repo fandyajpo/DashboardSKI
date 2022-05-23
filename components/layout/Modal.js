@@ -3,13 +3,14 @@ import ProductImageModal from "components/modal/ProductImage";
 import DeleteProductModal from "components/modal/DeleteProduct";
 
 import UserOrderModal from "components/modal/UserOrder";
+import Profile from "components/modal/Profile";
 
 const Modal = (props) => {
   const { modal } = props.globalCtx;
   const { setModal } = props.globalAct;
 
   return (
-    <div className="">
+    <div className=''>
       <div
         onClick={() => setModal("")}
         className={`bg-black/60 fixed w-full h-screen z-40 ${
@@ -43,6 +44,13 @@ const Modal = (props) => {
         } z-50 fixed right-0 duration-500 w-96 h-auto p-4`}
       >
         <UserOrderModal />
+      </div>
+      <div
+        className={`${
+          modal === "userProfile" ? "translate-x-0" : "translate-x-full"
+        } z-50 fixed right-0 duration-500 w-96 h-fit p-4`}
+      >
+        <Profile />
       </div>
     </div>
   );
