@@ -31,56 +31,6 @@ const OrderTable = ({}) => {
       tujuan: "Jln kaki no.34",
       status: "PENDING",
     },
-    {
-      order_by: "Fandy",
-      tujuan: "Gng eek",
-      status: "SUCCESS",
-    },
-    {
-      order_by: "Wiliam",
-      tujuan: "Jln rusa no.44",
-      status: "PENDING",
-    },
-    {
-      order_by: "Agus",
-      tujuan: "Jln ikan no.34",
-      status: "EXPIRED",
-    },
-    {
-      order_by: "Made",
-      tujuan: "Jln burung no.34",
-      status: "PENDING",
-    },
-    {
-      order_by: "Rizky",
-      tujuan: "Jln kaki no.34",
-      status: "PENDING",
-    },
-    {
-      order_by: "Fandy",
-      tujuan: "Gng eek",
-      status: "SUCCESS",
-    },
-    {
-      order_by: "Wiliam",
-      tujuan: "Jln rusa no.44",
-      status: "PENDING",
-    },
-    {
-      order_by: "Agus",
-      tujuan: "Jln ikan no.34",
-      status: "EXPIRED",
-    },
-    {
-      order_by: "Made",
-      tujuan: "Jln burung no.34",
-      status: "PENDING",
-    },
-    {
-      order_by: "Rizky",
-      tujuan: "Jln kaki no.34",
-      status: "PENDING",
-    },
   ];
   const columns = [
     {

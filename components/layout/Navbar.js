@@ -116,17 +116,17 @@ const SideNav = ({ children }) => {
   return (
     <>
       <Modal globalCtx={globalCtx} globalAct={globalAct} />
-      <div className='w-full h-full flex flex-row'>
-        <div className='w-80 h-full bg-white flex flex-col select-none'>
+      <div className='w-full h-full flex flex-row '>
+        <div className='w-80 h-screen bg-gray-200 flex flex-col select-none'>
           <div className='w-full h-auto flex justify-center items-center'>
             <div className='w-52 h-52 p-4'>
               <div className='w-full h-full relative rounded-full overflow-hidden'>
-                <div className='bg-red-500 w-full h-full'></div>
+                <div className='bg-white w-full h-full'></div>
               </div>
             </div>
           </div>
 
-          <div className='w-full h-full'>
+          <div className='w-full h-full bg-gray-200'>
             {/* overflow-scroll */}
             {faqs.map((item, key) => (
               <Item q={item.name} a={item.menu} key={key} r={router.asPath} />
@@ -134,7 +134,7 @@ const SideNav = ({ children }) => {
           </div>
         </div>
         <div className='w-full max-h-max relative border-l-2'>
-          <div className='w-full h-14 p-6 absolute top-0 bg-red-500 border-b shadow-sm flex justify-between'>
+          <div className='w-full h-14 p-6 absolute top-0 bg-gray-100 border-b shadow-sm flex justify-between'>
             <div className='w-full h-auto flex items-center text-sm capitalize'>
               <Link href='/dashboard'>
                 <svg
@@ -152,13 +152,13 @@ const SideNav = ({ children }) => {
                   ></path>
                 </svg>
               </Link>
-              <p className='text-white font-semibold'>
+              <p className='text-gray-600 font-semibold'>
                 &nbsp;• {router.asPath.split("/").at(-2)} •{" "}
                 {router.asPath.split("/").at(-1)}
               </p>
             </div>
             <div className='w-full h-full flex items-center justify-end gap-2 text-xs font-semibold'>
-              <p className='text-white'>{globalCtx.fullname}</p>
+              <p className='text-gray-600'>{globalCtx.fullname}</p>
               <div
                 onClick={() => globalAct.setModal("userProfile")}
                 className='w-6 h-6 rounded-full bg-amber-500  flex justify-center items-center border-2 border-white shadow'
